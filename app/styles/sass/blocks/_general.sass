@@ -1,0 +1,317 @@
+// GENERAL PROJECT STYLES
+
+.container
+	width: 100%
+	max-width: 1280px
+	margin: 0 auto
+
+.s-product-description
+	.c-header
+		padding: 50px 20px 0
+		text-align: center
+		background: linear-gradient(to bottom, rgba(204,204,204, 1) 0, rgba(255,255,255, 1) 395px)
+		border-top-left-radius: 32px
+		border-top-right-radius: 32px
+		&__title
+			text-align: center
+			font-size: 58px
+			line-height: 60px
+			font-weight: 700
+			margin-bottom: 20px
+		&__slogan
+			position: relative
+			font-size: 36px
+			line-height: 38px
+			font-weight: 400
+			margin-bottom: 20px
+			span
+				display: inline-block
+				position: relative
+				top: -2px
+				width: 148px
+				height: 22px
+				font-size: 0
+				background: url('../images/dist/logo-text.svg') no-repeat left center
+				background-size: 148px 22px
+
+		&__image
+			display: block
+			width: 100%
+			height: auto
+			margin: 0 auto 22px
+
+	.c-params
+		display: flex
+		width: 100%
+		flex-direction: row
+		align-items: flex-start
+		justify-content: center
+		max-width: 1100px
+		margin: 0 auto 40px
+		&__item
+			text-align: center
+			flex: 1 1 auto
+			img
+				display: inline-block
+				width: auto
+				height: 70px
+			strong
+				display: block
+				font-size: 26px
+				line-height: 36px
+				font-weight: 700
+				margin: 15px 0 0
+			span
+				font-size: 16.5px
+				font-weight: 400
+
+	.c-teaser
+		position: relative
+		border-radius: 32px
+		overflow: hidden
+		&__image
+			width: 100%
+			height: auto
+			border-radius: 32px
+			overflow: hidden
+			&--sm
+				display: none
+		&__title
+			position: absolute
+			top: 50%
+			left: 85px
+			font-size: 58px
+			font-weight: 700
+			line-height: 60px
+			color: #fff
+			max-width: 475px
+			transform: translateY(-50%)
+			&--style-2
+				top: auto
+				left: 50%
+				bottom: 45px
+				transform: translateX(-50%)
+				font-size: 32px
+				line-height: 36px
+				color: #000
+				width: max-content
+				letter-spacing: -.3px
+			&--style-3
+				top: 215px
+				left: auto
+				right: 30px
+			&--style-4
+				width: 100%
+				max-width: 100%
+				text-align: center
+				top: auto
+				left: 50%
+				bottom: 45px
+				transform: translateX(-50%)
+
+	.c-masonry
+		display: grid
+		column-gap: 44px
+		grid-template-rows: repeat(2, 1fr)
+		grid-template-columns: repeat(3, 1fr)
+		max-width: 1140px
+		margin: 60px auto 0
+		&__item
+			padding: 20px 0 15px
+			display: flex
+			flex-direction: column
+			justify-content: flex-start
+			&:nth-child(2),
+			&:nth-child(5)
+				flex-direction: column-reverse
+				padding-top: 0
+				justify-content: flex-end
+			img
+				max-width: 100%
+				height: auto
+				border-radius: 32px
+		&__title
+			font-size: 27px
+			font-weight: 700
+			line-height: 29px
+			padding: 35px 10px
+		&__image
+			&--sm
+				display: none
+
+	.c-grid-col-2
+		display: grid
+		column-gap: 20px
+		grid-template-columns: repeat(2, 1fr)
+		margin: 60px 0 35px
+
+	.c-teaser + .c-teaser
+		margin-top: 35px
+
+	.c-footer
+		margin: 35px 0 70px
+		&__image
+			margin: 0 auto
+			display: block
+			max-width: 100%
+			height: auto
+		&__offer
+			font-size: 12px
+			line-height: 16px
+			margin: 30px 0 20px
+
+.hidden-lg
+	display: none!important
+
+.hidden-sm
+	display: block
+
+@media only screen and (max-width : 1023px)
+
+	.s-product-description
+		.c-header
+			&__title
+				font-size: 38px
+				line-height: 40px
+			&__slogan
+				font-size: 28px
+				span
+					background-size: 115px 17px
+					height: 17px
+					top: 3px
+					width: 120px
+			&__image
+				margin: 0 auto 25px
+				max-width: 800px
+
+		.c-params
+			transform: scale(0.85)
+
+		.c-teaser
+			&__title
+				font-size: 42px
+				line-height: 46px
+				max-width: 325px
+				&--style-2
+					max-width: 90%
+					font-size: 26px
+					line-height: 30px
+				&--style-3
+					right: 25px
+					top: 125px
+				&--style-4
+					max-width: 90%
+					bottom: 30px
+
+
+@media only screen and (max-width : 767px)
+
+	.hidden-lg
+		display: flex!important
+	.hidden-sm
+		display: none!important
+
+	.s-product-description
+		.c-header
+			display: flex
+			flex-direction: column
+			padding: 10px 15px 0
+			background: linear-gradient(to bottom, rgba(204,204,204, 1) 0, rgba(255,255,255, 1) 195px)
+			&__title
+				order: 2
+				font-size: 23px
+				line-height: 28px
+				margin-bottom: 11px
+			&__slogan
+				order: 3
+				font-size: 15px
+				line-height: 17px
+				margin-bottom: 15px
+				span
+					top: -1px
+					width: 55px
+					height: 10px
+					background-size: 55px 10px
+			&__image
+				order: 1
+				margin: 0 auto 10px
+
+		.c-params
+			display: flex
+			flex-wrap: wrap
+			max-width: 333px
+			margin: 20px auto 10px
+			transform: scale(1)
+			&__item
+				text-align: center
+				flex: 1 1 50%
+				margin-bottom: 15px
+				img
+					height: 42px
+				strong
+					font-size: 18px
+					line-height: 20px
+					margin: 7px 0 0
+				span
+					font-size: 13px
+
+		.c-teaser
+			border-radius: 0
+			&__image
+				border-radius: 0
+				display: none
+				&--sm
+					display: block
+			&__title
+				width: calc(100% - 10px)
+				max-width: 100%
+				top: auto
+				left: 50%
+				bottom: 45px
+				font-size: 23px
+				line-height: 26px
+				text-align: center
+				transform: translateX(-50%)
+
+				// &--style-2
+				&--style-3
+					bottom: 25px
+					right: auto
+					max-width: 300px
+				&--style-4
+					bottom: 30px
+					width: 100%
+					max-width: 300px
+
+		.c-masonry
+			display: block
+			margin: 20px 15px 0
+			&__item
+				padding: 0 0 15px
+				flex-direction: column-reverse
+				img
+					border-radius: 16px
+			&__title
+				text-align: center
+				font-size: 23px
+				line-height: 26px
+				padding: 10px 0 20px
+			&__image
+				display: none
+				&--sm
+					display: block
+
+		.c-teaser + .c-teaser
+			margin-top: 20px
+
+		.c-footer
+			margin: 35px 15px 70px
+			&__image
+				margin: 0 auto
+				display: block
+				max-width: 100%
+				height: auto
+			&__offer
+				font-size: 12px
+				line-height: 16px
+				margin: 30px 0 20px
